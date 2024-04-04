@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="text" placeholder="hello"/>
+<button onclick="saveText()">Save</button>
+<button onclick="clearLocalStorage()">Clear</button>
+<script>
+    function saveText() {
+        localStorage.setItem("saved", text.value);
+    }
+    function clearLocalStorage() {
+        localStorage.removeItem("saved");
+    }
+    text.value = localStorage.getItem("saved") || '';
+</script>
+</body>
+</html>
+
+

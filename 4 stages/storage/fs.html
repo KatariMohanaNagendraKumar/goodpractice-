@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fs = require('fs');
+
+// Create 20 folders asynchronously
+for (let i = 1; i <= 20; i++) {
+    const folderName = `folder_${i}`;
+    fs.mkdir(folderName, (err) => {
+        if (err) {
+            console.error(`Error creating folder ${folderName}:`, err);
+        } else {
+            console.log(`Folder ${folderName} created successfully.`);
+        }
+    });
+}
+
+    </script>
+    
+</body>
+</html>
