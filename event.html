@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function first(){
+            console.log("i am first")
+        }
+        function  second(){
+            setTimeout(()=>{
+                console.log("i am second")
+            },0)
+        }
+        function Third(){
+            return  new Promise((res,rej)=>{
+                res("I am thrd")
+            })
+        }
+        function fouth(){
+            console.log("i am fourth")
+        }
+
+        first();
+        second();
+        Third().then((result)=>{
+            console.log(result)
+        });
+        fouth();
+    </script>
+    
+</body>
+</html>
